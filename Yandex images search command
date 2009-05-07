@@ -1,4 +1,4 @@
-/* This is the Yandex-search command. */
+/* This is the Yandex image search command. */
 CmdUtils.CreateCommand({
   name: "ya-image",
   takes: {"text": noun_arb_text},
