@@ -1,0 +1,17 @@
+/* This is the Yandex-search command. */
+CmdUtils.CreateCommand({
+  name: "ya-image",
+  takes: {"text": noun_arb_text},
+  icon: "http://images.yandex.ru/favicon.ico",
+  homepage: "http://images.yandex.ru",
+  author: {name: "Alexey Fedoseev", email: "aleksey@fedoseev.net"},
+  license: "GPL",
+  description: "Yandex images search",
+  execute: function(input) {
+    var location = input.text;
+    var url = "http://images.yandex.ru/yandsearch?text=";
+    url += encodeURIComponent(location);
+    Utils.openUrlInBrowser( url );
+  }
+});
+ 
